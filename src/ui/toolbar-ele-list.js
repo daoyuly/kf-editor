@@ -10,14 +10,17 @@ define( function ( require ) {
         OTHER_POSITION = require( "ui/other-position.data" ),
         kity = require( "kity" );
 
+    var imgPath = 'assets/';
+    var formulaEditorLang = window.formulaEditorLang || {};
+
     var config = [ {
         type: UI_ELE_TYPE.DRAPDOWN_BOX,
         options: {
             button: {
-                label: '预设<br/>',
+                label: formulaEditorLang["预设<br/>"] ||'预设<br/>',
                 className: 'yushe-btn',
                 icon: {
-                    src: "assets/images/toolbar/btn.png",
+                    src: imgPath + "images/toolbar/btn.png",
                     x: 0,
                     y: 0
                 },
@@ -28,21 +31,21 @@ define( function ( require ) {
             box: {
                 width: 367,
                 group: [ {
-                    title: "预设公式",
+                    title: formulaEditorLang["预设公式"] || "预设公式",
                     items: [ {
-                        title: "预设公式",
+                        title: formulaEditorLang["预设公式"] || "预设公式",
                         content: [ {
-                            label: "二次公式",
+                            label: formulaEditorLang["二次公式"] || "二次公式",
                             item: {
                                 val: "x=\\frac {-b\\pm\\sqrt {b^2-4ac}}{2a}"
                             }
                         }, {
-                            label: "二项式定理",
+                            label: formulaEditorLang["二项式定理"] || "二项式定理",
                             item: {
                                 val: "{\\left(x+a\\right)}^2=\\sum^n_{k=0}{\\left(^n_k\\right)x^ka^{n-k}}"
                             }
                         }, {
-                            label: "勾股定理",
+                            label: formulaEditorLang["勾股定理"] || "勾股定理",
                             item: {
                                 val: "a^2+b^2=c^2"
                             }
@@ -61,22 +64,22 @@ define( function ( require ) {
                 width: 527,
                 type: BOX_TYPE.OVERLAP,
                 group: [ {
-                    title: "基础数学",
+                    title: formulaEditorLang["基础数学"] || "基础数学",
                     items: []
                 }, {
-                    title: "希腊字母",
+                    title: formulaEditorLang["希腊字母"] || "希腊字母",
                     items: []
                 }, {
-                    title: "求反关系运算符",
+                    title: formulaEditorLang["求反关系运算符"] || "求反关系运算符",
                     items: []
                 }, {
-                    title: "字母类符号",
+                    title: formulaEditorLang["字母类符号"] || "字母类符号",
                     items: []
                 }, {
-                    title: "箭头",
+                    title: formulaEditorLang["箭头"] || "箭头",
                     items: []
                 }, {
-                    title: "手写体",
+                    title: formulaEditorLang["手写体"] || "手写体",
                     items: []
                 } ]
             }
@@ -87,9 +90,9 @@ define( function ( require ) {
         type: UI_ELE_TYPE.DRAPDOWN_BOX,
         options: {
             button: {
-                label: "分数<br/>",
+                label: formulaEditorLang["分数<br/>"] || "分数<br/>",
                 icon: {
-                    src: "assets/images/toolbar/btn.png",
+                    src: imgPath + "images/toolbar/btn.png",
                     x: 45,
                     y: 0
                 }
@@ -97,9 +100,9 @@ define( function ( require ) {
             box: {
                 width: 332,
                 group: [ {
-                    title: "分数",
+                    title: formulaEditorLang["分数"] || "分数",
                     items: [ {
-                        title: "分数",
+                        title: formulaEditorLang["分数"] || "分数",
                         content: [ {
                             item: {
                                 val: "\\frac \\placeholder\\placeholder"
@@ -110,7 +113,7 @@ define( function ( require ) {
                             }
                         } ]
                     }, {
-                        title: "常用分数",
+                        title: formulaEditorLang["常用分数"] || "常用分数",
                         content: [ {
                             item: {
                                 val: "\\frac {dy}{dx}"
@@ -136,9 +139,9 @@ define( function ( require ) {
         type: UI_ELE_TYPE.DRAPDOWN_BOX,
         options: {
             button: {
-                label: "上下标<br/>",
+                label: formulaEditorLang["上下标<br/>"] || "上下标<br/>",
                 icon: {
-                    src: "assets/images/toolbar/btn.png",
+                    src: imgPath + "images/toolbar/btn.png",
                     x: 82,
                     y: 0
                 }
@@ -146,9 +149,9 @@ define( function ( require ) {
             box: {
                 width: 332,
                 group: [ {
-                    title: "上标和下标",
+                    title: formulaEditorLang["上标和下标"] || "上标和下标",
                     items: [ {
-                        title: "上标和下标",
+                        title: formulaEditorLang["上标和下标"] || "上标和下标",
                         content: [ {
                             item: {
                                 val: "\\placeholder^\\placeholder"
@@ -167,7 +170,7 @@ define( function ( require ) {
                             }
                         } ]
                     }, {
-                        title: "常用的上标和下标",
+                        title: formulaEditorLang["常用的上标和下标"] || "常用的上标和下标",
                         content: [ {
                             item: {
                                 val: "e^{-i\\omega t}"
@@ -189,9 +192,9 @@ define( function ( require ) {
         type: UI_ELE_TYPE.DRAPDOWN_BOX,
         options: {
             button: {
-                label: "根式<br/>",
+                label: formulaEditorLang["根式<br/>"] || "根式<br/>",
                 icon: {
-                    src: "assets/images/toolbar/btn.png",
+                    src: imgPath + "images/toolbar/btn.png",
                     x: 119,
                     y: 0
                 }
@@ -199,9 +202,9 @@ define( function ( require ) {
             box: {
                 width: 342,
                 group: [ {
-                    title: "根式",
+                    title: formulaEditorLang["根式"] || "根式",
                     items: [ {
-                        title: "根式",
+                        title: formulaEditorLang["根式"] || "根式",
                         content: [ {
                             item: {
                                 val: "\\sqrt \\placeholder"
@@ -220,7 +223,7 @@ define( function ( require ) {
                             }
                         } ]
                     }, {
-                        title: "常用根式",
+                        title: formulaEditorLang["常用根式"] || "常用根式",
                         content: [ {
                             item: {
                                 val: "\\frac {-b\\pm\\sqrt{b^2-4ac}}{2a}"
@@ -238,9 +241,9 @@ define( function ( require ) {
         type: UI_ELE_TYPE.DRAPDOWN_BOX,
         options: {
             button: {
-                label: "积分<br/>",
+                label: formulaEditorLang["积分<br/>"] || "积分<br/>",
                 icon: {
-                    src: "assets/images/toolbar/btn.png",
+                    src: imgPath + "images/toolbar/btn.png",
                     x: 156,
                     y: 0
                 }
@@ -248,9 +251,9 @@ define( function ( require ) {
             box: {
                 width: 332,
                 group: [ {
-                    title: "积分",
+                    title: formulaEditorLang["积分"] || "积分",
                     items: [ {
-                        title: "积分",
+                        title: formulaEditorLang["积分"] || "积分",
                         content: [ {
                             item: {
                                 val: "\\int \\placeholder"
@@ -284,9 +287,9 @@ define( function ( require ) {
         type: UI_ELE_TYPE.DRAPDOWN_BOX,
         options: {
             button: {
-                label: "大型<br/>运算符",
+                label: formulaEditorLang["大型<br/>运算符"] || "大型<br/>运算符",
                 icon: {
-                    src: "assets/images/toolbar/btn.png",
+                    src: imgPath + "images/toolbar/btn.png",
                     x: 193,
                     y: 0
                 }
@@ -294,9 +297,9 @@ define( function ( require ) {
             box: {
                 width: 332,
                 group: [ {
-                    title: "求和",
+                    title: formulaEditorLang["求和"] || "求和",
                     items: [ {
-                        title: "求和",
+                        title: formulaEditorLang["求和"] || "求和",
                         content: [ {
                             item: {
                                 val: "\\sum\\placeholder"
@@ -318,9 +321,9 @@ define( function ( require ) {
         type: UI_ELE_TYPE.DRAPDOWN_BOX,
         options: {
             button: {
-                label: "括号<br/>",
+                label: formulaEditorLang["括号<br/>"] || "括号<br/>",
                 icon: {
-                    src: "assets/images/toolbar/btn.png",
+                    src: imgPath + "images/toolbar/btn.png",
                     x: 230,
                     y: 0
                 }
@@ -328,9 +331,9 @@ define( function ( require ) {
             box: {
                 width: 332,
                 group: [ {
-                    title: "方括号",
+                    title: formulaEditorLang["方括号"] || "方括号",
                     items: [ {
-                        title: "方括号",
+                        title: formulaEditorLang["方括号"] || "方括号",
                         content: [ {
                             item: {
                                 val: "\\left(\\placeholder\\right)"
@@ -356,9 +359,9 @@ define( function ( require ) {
         type: UI_ELE_TYPE.DRAPDOWN_BOX,
         options: {
             button: {
-                label: "函数<br/>",
+                label: formulaEditorLang["函数<br/>"] || "函数<br/>",
                 icon: {
-                    src: "assets/images/toolbar/btn.png",
+                    src: imgPath + "images/toolbar/btn.png",
                     x: 267,
                     y: 0
                 }
@@ -366,9 +369,9 @@ define( function ( require ) {
             box: {
                 width: 340,
                 group: [ {
-                    title: "函数",
+                    title: formulaEditorLang["函数"] || "函数",
                     items: [ {
-                        title: "三角函数",
+                        title: formulaEditorLang["三角函数"] || "三角函数",
                         content: [ {
                             item: {
                                 val: "\\sin\\placeholder"
@@ -395,7 +398,7 @@ define( function ( require ) {
                             }
                         } ]
                     }, {
-                        title: "常用函数",
+                        title: formulaEditorLang["常用函数"] || "常用函数",
                         content: [ {
                             item: {
                                 val: "\\sin\\theta"
@@ -419,7 +422,7 @@ define( function ( require ) {
     ( function () {
 
         var tmp = [],
-            otherImageSrc = "assets/images/toolbar/other.png",
+            otherImageSrc = imgPath + "images/toolbar/other.png",
             currentConf = [];
 
         kity.Utils.each( config, function ( conf ) {
@@ -478,8 +481,8 @@ define( function ( require ) {
             configList = config[ 2 ].options.box.group[ 0 ].items;
 
         configList.push( {
-            title: "基础数学",
-            content: getIconContents( list, "assets/images/toolbar/char.png" )
+            title: formulaEditorLang["基础数学"] || "基础数学",
+            content: getIconContents( list, imgPath + "images/toolbar/char.png" )
         } );
 
     } )();
@@ -488,13 +491,13 @@ define( function ( require ) {
     ( function () {
 
         var greekList = [ {
-                title: "小写",
+                title: formulaEditorLang["小写"] || "小写",
                 values: [ "alpha", "beta", "gamma", "delta", "epsilon", "zeta", "eta", "theta", "iota", "kappa", "lambda", "mu", "nu", "xi", "omicron", "pi", "rho", "sigma", "tau", "upsilon", "phi", "chi", "psi", "omega" ]
             }, {
-                title: "大写",
+                title: formulaEditorLang["大写"] || "大写",
                 values: [ "Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta", "Eta", "Theta", "Iota", "Kappa", "Lambda", "Mu", "Nu", "Xi", "Omicron", "Pi", "Rho", "Sigma", "Tau", "Upsilon", "Phi", "Chi", "Psi", "Omega" ]
             }, {
-                title: "变体",
+                title: formulaEditorLang["变体"] || "变体",
                 values: [ "digamma", "varepsilon", "varkappa", "varphi", "varpi", "varrho", "varsigma", "vartheta" ]
             } ],
             greekConfigList = config[ 2 ].options.box.group[ 1 ].items;
@@ -502,19 +505,19 @@ define( function ( require ) {
         // 小写处理
         greekConfigList.push( {
             title: greekList[ 0 ].title,
-            content: getIconContents( greekList[ 0 ].values, "assets/images/toolbar/char.png" )
+            content: getIconContents( greekList[ 0 ].values, imgPath + "images/toolbar/char.png" )
         } );
 
         // 大写处理
         greekConfigList.push( {
             title: greekList[ 1 ].title,
-            content: getIconContents( greekList[ 1 ].values, "assets/images/toolbar/char.png" )
+            content: getIconContents( greekList[ 1 ].values, imgPath + "images/toolbar/char.png" )
         } );
 
         // 变体处理
         greekConfigList.push( {
             title: greekList[ 2 ].title,
-            content: getIconContents( greekList[ 2 ].values, "assets/images/toolbar/char.png" )
+            content: getIconContents( greekList[ 2 ].values, imgPath + "images/toolbar/char.png" )
         } );
 
     } )();
@@ -523,7 +526,7 @@ define( function ( require ) {
     ( function () {
 
         var greekList = [ {
-                title: "求反关系运算符",
+                title: formulaEditorLang["求反关系运算符"] || "求反关系运算符",
                 values: [
                     "neq", "nless", "ngtr", "nleq", "ngeq", "nsim", "lneqq",
                     "gneqq", "nprec", "nsucc", "notin", "nsubseteq", "nsupseteq",
@@ -537,7 +540,7 @@ define( function ( require ) {
 
         greekConfigList.push( {
             title: greekList[ 0 ].title,
-            content: getIconContents( greekList[ 0 ].values, "assets/images/toolbar/char.png" )
+            content: getIconContents( greekList[ 0 ].values, imgPath + "images/toolbar/char.png" )
         } );
 
     } )();
@@ -553,8 +556,8 @@ define( function ( require ) {
             configList = config[ 2 ].options.box.group[ 3 ].items;
 
         configList.push( {
-            title: "字母类符号",
-            content: getIconContents( list, "assets/images/toolbar/char.png" )
+            title: formulaEditorLang["字母类符号"] || "字母类符号",
+            content: getIconContents( list, imgPath + "images/toolbar/char.png" )
         } );
 
     } )();
@@ -581,8 +584,8 @@ define( function ( require ) {
             configList = config[ 2 ].options.box.group[ 4 ].items;
 
         configList.push( {
-            title: "箭头",
-            content: getIconContents( list, "assets/images/toolbar/char.png" )
+            title: formulaEditorLang["箭头"] || "箭头",
+            content: getIconContents( list, imgPath + "images/toolbar/char.png" )
         } );
 
     } )();
@@ -591,13 +594,13 @@ define( function ( require ) {
     ( function () {
 
         var list = [ {
-                title: "手写体",
+                title: formulaEditorLang["手写体"] || "手写体",
                 values: [
                     "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
                     "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X",
                     "Y", "Z" ]
             }, {
-                title: "花体",
+                title: formulaEditorLang["花体"] || "花体",
                 values: [
                     "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
                     "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X",
@@ -606,14 +609,14 @@ define( function ( require ) {
                     "w", "x", "y", "z"
                 ]
             }, {
-                title: "双线",
+                title: formulaEditorLang["双线"] || "双线",
                 values: [
                     "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
                     "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X",
                     "Y", "Z"
                 ]
             }, {
-                title: "罗马",
+                title: formulaEditorLang["罗马"] || "罗马",
                 values: [
                     "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
                     "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X",
@@ -651,22 +654,22 @@ define( function ( require ) {
         // 手写体
         configList.push( {
             title: list[ 0 ].title,
-            content: getIconContents( list[ 0 ].values, "assets/images/toolbar/char.png" )
+            content: getIconContents( list[ 0 ].values, imgPath + "images/toolbar/char.png" )
         } );
 
         configList.push( {
             title: list[ 1 ].title,
-            content: getIconContents( list[ 1 ].values, "assets/images/toolbar/char.png" )
+            content: getIconContents( list[ 1 ].values, imgPath + "images/toolbar/char.png" )
         } );
 
         configList.push( {
             title: list[ 2 ].title,
-            content: getIconContents( list[ 2 ].values, "assets/images/toolbar/char.png" )
+            content: getIconContents( list[ 2 ].values, imgPath + "images/toolbar/char.png" )
         } );
 
         configList.push( {
             title: list[ 3 ].title,
-            content: getIconContents( list[ 3 ].values, "assets/images/toolbar/char.png" )
+            content: getIconContents( list[ 3 ].values, imgPath + "images/toolbar/char.png" )
         } );
 
     } )();

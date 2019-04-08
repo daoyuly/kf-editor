@@ -17,9 +17,13 @@
     <!--<script src="dev-lib/exports.js"></script>-->
     <!--<script src="dev-lib/start.js"></script>-->
     <!--<script src="dev-lib/dev-start.js"></script>-->
+    <script src="i18n/en-us.js"></script>
+
     <script src="dist/kityformula-editor.all.js"></script>
+    
     <script>
         jQuery( function ($) {
+            window.formulaEditorLang = window.formulaEditorLang || {};
 
             var factory = kf.EditorFactory.create( $( "#kfEditorContainer" )[ 0 ], {
                 render: {

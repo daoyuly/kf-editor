@@ -3,7 +3,7 @@
  */
 
 define( function () {
-
+    var formulaEditorLang = window.formulaEditorLang || {};
     return {
 
         // 光标符号
@@ -12,7 +12,7 @@ define( function () {
         // 根占位符内容与颜色
         rootPlaceholder: {
             color: "#666",
-            content: "在此处键入公式",
+            content: formulaEditorLang["在此处键入公式"] || "在此处键入公式",
             fontsize: 16
         },
 

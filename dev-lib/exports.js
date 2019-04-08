@@ -8,6 +8,7 @@
     try {
         use( 'kf.start' );
     } catch ( e ) {
+        console.error(e);
     }
 
 } )( this );
